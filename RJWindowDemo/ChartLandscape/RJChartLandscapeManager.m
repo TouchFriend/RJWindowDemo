@@ -86,7 +86,6 @@
             self.window.landscapeViewController.delegate = self;
             self.window.landscapeViewController.targetRect = targetRect;
             self.window.landscapeViewController.originRect = self.contentView.frame;
-            NSLog(@"%@--%@", NSStringFromCGRect(targetRect), NSStringFromCGRect(self.contentView.frame));
             self.window.landscapeViewController.containerView = self.containerView;
             self.window.landscapeViewController.contentView = self.contentView;
             self.fullScreen = YES;

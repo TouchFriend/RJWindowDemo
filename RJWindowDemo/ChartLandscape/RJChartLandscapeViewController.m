@@ -72,7 +72,7 @@
 //        }
 //    }];
     self.chartContainerView = chartContainerView;
-    chartContainerView.backgroundColor = [UIColor greenColor];
+    chartContainerView.backgroundColor = [UIColor whiteColor];
 }
 
 - (void)viewWillLayoutSubviews {

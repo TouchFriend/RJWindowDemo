@@ -1,0 +1,6 @@
+framework module Pods_RJWindowDemoUITests {
+  umbrella header "Pods-RJWindowDemoUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
