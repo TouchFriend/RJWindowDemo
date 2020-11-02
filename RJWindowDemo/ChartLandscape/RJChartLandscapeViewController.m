@@ -112,7 +112,6 @@
     
     [self.delegate ls_willRotateToOrientation:self.currentOrientation];
     BOOL isFullscreen = size.width > size.height;
-    NSLog(@"contentView:%@", NSStringFromCGRect(self.contentView.frame));
     [CATransaction begin];
     [CATransaction setDisableActions:NO];
     [coordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext> _Nonnull context) {
