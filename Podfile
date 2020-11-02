@@ -6,6 +6,7 @@ target 'RJWindowDemo' do
   use_frameworks!
 
     pod 'Masonry'
+    pod 'Charts'
   # Pods for RJWindowDemo
 
   target 'RJWindowDemoTests' do
