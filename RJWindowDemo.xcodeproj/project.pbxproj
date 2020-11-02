@@ -3,12 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A4453B06E12FCD0F6CA029C /* Pods_RJWindowDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A940E285A212C05102BF8B /* Pods_RJWindowDemo.framework */; };
+		7E4144B34080C16DA5DB41C7 /* Pods_RJWindowDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AC4725A83178FD2394AA6E2 /* Pods_RJWindowDemoUITests.framework */; };
+		9B46521257E87F76AADCC14E /* Pods_RJWindowDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66BA691220B217FC376227CD /* Pods_RJWindowDemoTests.framework */; };
 		BF1FA6E32549103100B46A58 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1FA6E22549103100B46A58 /* AppDelegate.m */; };
-		BF1FA6E62549103100B46A58 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1FA6E52549103100B46A58 /* SceneDelegate.m */; };
 		BF1FA6E92549103100B46A58 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1FA6E82549103100B46A58 /* ViewController.m */; };
 		BF1FA6EC2549103100B46A58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF1FA6EA2549103100B46A58 /* Main.storyboard */; };
 		BF1FA6EE2549103200B46A58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF1FA6ED2549103200B46A58 /* Assets.xcassets */; };
@@ -16,6 +18,13 @@
 		BF1FA6F42549103200B46A58 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1FA6F32549103200B46A58 /* main.m */; };
 		BF1FA6FE2549103200B46A58 /* RJWindowDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1FA6FD2549103200B46A58 /* RJWindowDemoTests.m */; };
 		BF1FA7092549103200B46A58 /* RJWindowDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1FA7082549103200B46A58 /* RJWindowDemoUITests.m */; };
+		BF1FA71B2549438100B46A58 /* RJMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1FA71A2549438100B46A58 /* RJMainViewController.m */; };
+		BF263592254BE6B100279CE7 /* RJChartRotationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BF263591254BE6B100279CE7 /* RJChartRotationHelper.m */; };
+		BF263598254BFDBF00279CE7 /* RJMainTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF263597254BFDBF00279CE7 /* RJMainTabBarViewController.m */; };
+		BF26359E254BFE0400279CE7 /* RJMyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF26359D254BFE0400279CE7 /* RJMyViewController.m */; };
+		BF4C308E254AB33300BB45C1 /* RJChartLandscapeWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4C308D254AB33300BB45C1 /* RJChartLandscapeWindow.m */; };
+		BF4C3094254ABF3000BB45C1 /* RJChartLandscapeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4C3093254ABF3000BB45C1 /* RJChartLandscapeViewController.m */; };
+		BF4C309B254ABFC500BB45C1 /* RJChartLandscapeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4C309A254ABFC500BB45C1 /* RJChartLandscapeManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,11 +45,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		14A940E285A212C05102BF8B /* Pods_RJWindowDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RJWindowDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		66BA691220B217FC376227CD /* Pods_RJWindowDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RJWindowDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		97E340EF206CCCE9BF8B26E6 /* Pods-RJWindowDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RJWindowDemo.debug.xcconfig"; path = "Target Support Files/Pods-RJWindowDemo/Pods-RJWindowDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		9AC4725A83178FD2394AA6E2 /* Pods_RJWindowDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RJWindowDemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F4506ED9A3ED6B35901AD52 /* Pods-RJWindowDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RJWindowDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-RJWindowDemoTests/Pods-RJWindowDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AE0F5793B917B782798533AC /* Pods-RJWindowDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RJWindowDemo.release.xcconfig"; path = "Target Support Files/Pods-RJWindowDemo/Pods-RJWindowDemo.release.xcconfig"; sourceTree = "<group>"; };
 		BF1FA6DE2549103100B46A58 /* RJWindowDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RJWindowDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF1FA6E12549103100B46A58 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BF1FA6E22549103100B46A58 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		BF1FA6E42549103100B46A58 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		BF1FA6E52549103100B46A58 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		BF1FA6E72549103100B46A58 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		BF1FA6E82549103100B46A58 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		BF1FA6EB2549103100B46A58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -54,6 +67,23 @@
 		BF1FA7042549103200B46A58 /* RJWindowDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RJWindowDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF1FA7082549103200B46A58 /* RJWindowDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJWindowDemoUITests.m; sourceTree = "<group>"; };
 		BF1FA70A2549103200B46A58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF1FA7192549438100B46A58 /* RJMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJMainViewController.h; sourceTree = "<group>"; };
+		BF1FA71A2549438100B46A58 /* RJMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJMainViewController.m; sourceTree = "<group>"; };
+		BF263590254BE6B100279CE7 /* RJChartRotationHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJChartRotationHelper.h; sourceTree = "<group>"; };
+		BF263591254BE6B100279CE7 /* RJChartRotationHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJChartRotationHelper.m; sourceTree = "<group>"; };
+		BF263596254BFDBF00279CE7 /* RJMainTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJMainTabBarViewController.h; sourceTree = "<group>"; };
+		BF263597254BFDBF00279CE7 /* RJMainTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJMainTabBarViewController.m; sourceTree = "<group>"; };
+		BF26359C254BFE0400279CE7 /* RJMyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJMyViewController.h; sourceTree = "<group>"; };
+		BF26359D254BFE0400279CE7 /* RJMyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJMyViewController.m; sourceTree = "<group>"; };
+		BF4C308C254AB33300BB45C1 /* RJChartLandscapeWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJChartLandscapeWindow.h; sourceTree = "<group>"; };
+		BF4C308D254AB33300BB45C1 /* RJChartLandscapeWindow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJChartLandscapeWindow.m; sourceTree = "<group>"; };
+		BF4C3092254ABF3000BB45C1 /* RJChartLandscapeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJChartLandscapeViewController.h; sourceTree = "<group>"; };
+		BF4C3093254ABF3000BB45C1 /* RJChartLandscapeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJChartLandscapeViewController.m; sourceTree = "<group>"; };
+		BF4C3099254ABFC500BB45C1 /* RJChartLandscapeManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJChartLandscapeManager.h; sourceTree = "<group>"; };
+		BF4C309A254ABFC500BB45C1 /* RJChartLandscapeManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJChartLandscapeManager.m; sourceTree = "<group>"; };
+		C4E26E8BFACFD5329BEA57DD /* Pods-RJWindowDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RJWindowDemoTests.release.xcconfig"; path = "Target Support Files/Pods-RJWindowDemoTests/Pods-RJWindowDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		CF06B60D95D0BB0B2E5234A1 /* Pods-RJWindowDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RJWindowDemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-RJWindowDemoUITests/Pods-RJWindowDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		EF66041C616D811D0AB338A9 /* Pods-RJWindowDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RJWindowDemoUITests.release.xcconfig"; path = "Target Support Files/Pods-RJWindowDemoUITests/Pods-RJWindowDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A4453B06E12FCD0F6CA029C /* Pods_RJWindowDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B46521257E87F76AADCC14E /* Pods_RJWindowDemoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,12 +107,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E4144B34080C16DA5DB41C7 /* Pods_RJWindowDemoUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		58D86DE3DA50A424C9E31663 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				14A940E285A212C05102BF8B /* Pods_RJWindowDemo.framework */,
+				66BA691220B217FC376227CD /* Pods_RJWindowDemoTests.framework */,
+				9AC4725A83178FD2394AA6E2 /* Pods_RJWindowDemoUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BF1FA6D52549103100B46A58 = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +131,8 @@
 				BF1FA6FC2549103200B46A58 /* RJWindowDemoTests */,
 				BF1FA7072549103200B46A58 /* RJWindowDemoUITests */,
 				BF1FA6DF2549103100B46A58 /* Products */,
+				C8ED37BA3217B9FD25C59743 /* Pods */,
+				58D86DE3DA50A424C9E31663 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,10 +149,10 @@
 		BF1FA6E02549103100B46A58 /* RJWindowDemo */ = {
 			isa = PBXGroup;
 			children = (
+				BF4C3098254ABF7700BB45C1 /* ChartLandscape */,
+				BF2635A2254BFE0E00279CE7 /* ViewControllers */,
 				BF1FA6E12549103100B46A58 /* AppDelegate.h */,
 				BF1FA6E22549103100B46A58 /* AppDelegate.m */,
-				BF1FA6E42549103100B46A58 /* SceneDelegate.h */,
-				BF1FA6E52549103100B46A58 /* SceneDelegate.m */,
 				BF1FA6E72549103100B46A58 /* ViewController.h */,
 				BF1FA6E82549103100B46A58 /* ViewController.m */,
 				BF1FA6EA2549103100B46A58 /* Main.storyboard */,
@@ -137,6 +182,47 @@
 			path = RJWindowDemoUITests;
 			sourceTree = "<group>";
 		};
+		BF2635A2254BFE0E00279CE7 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BF1FA7192549438100B46A58 /* RJMainViewController.h */,
+				BF1FA71A2549438100B46A58 /* RJMainViewController.m */,
+				BF26359C254BFE0400279CE7 /* RJMyViewController.h */,
+				BF26359D254BFE0400279CE7 /* RJMyViewController.m */,
+				BF263596254BFDBF00279CE7 /* RJMainTabBarViewController.h */,
+				BF263597254BFDBF00279CE7 /* RJMainTabBarViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		BF4C3098254ABF7700BB45C1 /* ChartLandscape */ = {
+			isa = PBXGroup;
+			children = (
+				BF4C3099254ABFC500BB45C1 /* RJChartLandscapeManager.h */,
+				BF4C309A254ABFC500BB45C1 /* RJChartLandscapeManager.m */,
+				BF4C308C254AB33300BB45C1 /* RJChartLandscapeWindow.h */,
+				BF4C308D254AB33300BB45C1 /* RJChartLandscapeWindow.m */,
+				BF4C3092254ABF3000BB45C1 /* RJChartLandscapeViewController.h */,
+				BF4C3093254ABF3000BB45C1 /* RJChartLandscapeViewController.m */,
+				BF263590254BE6B100279CE7 /* RJChartRotationHelper.h */,
+				BF263591254BE6B100279CE7 /* RJChartRotationHelper.m */,
+			);
+			path = ChartLandscape;
+			sourceTree = "<group>";
+		};
+		C8ED37BA3217B9FD25C59743 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				97E340EF206CCCE9BF8B26E6 /* Pods-RJWindowDemo.debug.xcconfig */,
+				AE0F5793B917B782798533AC /* Pods-RJWindowDemo.release.xcconfig */,
+				9F4506ED9A3ED6B35901AD52 /* Pods-RJWindowDemoTests.debug.xcconfig */,
+				C4E26E8BFACFD5329BEA57DD /* Pods-RJWindowDemoTests.release.xcconfig */,
+				CF06B60D95D0BB0B2E5234A1 /* Pods-RJWindowDemoUITests.debug.xcconfig */,
+				EF66041C616D811D0AB338A9 /* Pods-RJWindowDemoUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -144,9 +230,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BF1FA70D2549103200B46A58 /* Build configuration list for PBXNativeTarget "RJWindowDemo" */;
 			buildPhases = (
+				FA23CDF9C0F9307B5D4E616B /* [CP] Check Pods Manifest.lock */,
 				BF1FA6DA2549103100B46A58 /* Sources */,
 				BF1FA6DB2549103100B46A58 /* Frameworks */,
 				BF1FA6DC2549103100B46A58 /* Resources */,
+				8F686E9995A432A209037924 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -161,6 +249,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BF1FA7102549103200B46A58 /* Build configuration list for PBXNativeTarget "RJWindowDemoTests" */;
 			buildPhases = (
+				B6F74D33122E8500DF63E255 /* [CP] Check Pods Manifest.lock */,
 				BF1FA6F52549103200B46A58 /* Sources */,
 				BF1FA6F62549103200B46A58 /* Frameworks */,
 				BF1FA6F72549103200B46A58 /* Resources */,
@@ -179,6 +268,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BF1FA7132549103200B46A58 /* Build configuration list for PBXNativeTarget "RJWindowDemoUITests" */;
 			buildPhases = (
+				49F3682EAC18B6120EC83670 /* [CP] Check Pods Manifest.lock */,
 				BF1FA7002549103200B46A58 /* Sources */,
 				BF1FA7012549103200B46A58 /* Frameworks */,
 				BF1FA7022549103200B46A58 /* Resources */,
@@ -199,7 +289,9 @@
 		BF1FA6D62549103100B46A58 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = RJ;
 				LastUpgradeCheck = 1210;
+				ORGANIZATIONNAME = RJSoft;
 				TargetAttributes = {
 					BF1FA6DD2549103100B46A58 = {
 						CreatedOnToolsVersion = 12.1;
@@ -261,15 +353,107 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		49F3682EAC18B6120EC83670 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RJWindowDemoUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F686E9995A432A209037924 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RJWindowDemo/Pods-RJWindowDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RJWindowDemo/Pods-RJWindowDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RJWindowDemo/Pods-RJWindowDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B6F74D33122E8500DF63E255 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RJWindowDemoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA23CDF9C0F9307B5D4E616B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RJWindowDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BF1FA6DA2549103100B46A58 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF263592254BE6B100279CE7 /* RJChartRotationHelper.m in Sources */,
+				BF263598254BFDBF00279CE7 /* RJMainTabBarViewController.m in Sources */,
+				BF26359E254BFE0400279CE7 /* RJMyViewController.m in Sources */,
+				BF4C308E254AB33300BB45C1 /* RJChartLandscapeWindow.m in Sources */,
 				BF1FA6E92549103100B46A58 /* ViewController.m in Sources */,
+				BF4C3094254ABF3000BB45C1 /* RJChartLandscapeViewController.m in Sources */,
 				BF1FA6E32549103100B46A58 /* AppDelegate.m in Sources */,
+				BF1FA71B2549438100B46A58 /* RJMainViewController.m in Sources */,
+				BF4C309B254ABFC500BB45C1 /* RJChartLandscapeManager.m in Sources */,
 				BF1FA6F42549103200B46A58 /* main.m in Sources */,
-				BF1FA6E62549103100B46A58 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,42 +622,47 @@
 		};
 		BF1FA70E2549103200B46A58 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97E340EF206CCCE9BF8B26E6 /* Pods-RJWindowDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RJ2G45B9KH;
 				INFOPLIST_FILE = RJWindowDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.RJSoftware.RJWindowDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		BF1FA70F2549103200B46A58 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE0F5793B917B782798533AC /* Pods-RJWindowDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RJ2G45B9KH;
 				INFOPLIST_FILE = RJWindowDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.RJSoftware.RJWindowDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		BF1FA7112549103200B46A58 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F4506ED9A3ED6B35901AD52 /* Pods-RJWindowDemoTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -494,6 +683,7 @@
 		};
 		BF1FA7122549103200B46A58 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C4E26E8BFACFD5329BEA57DD /* Pods-RJWindowDemoTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -514,6 +704,7 @@
 		};
 		BF1FA7142549103200B46A58 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF06B60D95D0BB0B2E5234A1 /* Pods-RJWindowDemoUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RJ2G45B9KH;
@@ -532,6 +723,7 @@
 		};
 		BF1FA7152549103200B46A58 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF66041C616D811D0AB338A9 /* Pods-RJWindowDemoUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RJ2G45B9KH;
