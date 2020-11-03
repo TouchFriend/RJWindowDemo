@@ -16,8 +16,6 @@
 /// <#Desription#>
 @property (nonatomic, weak) UIButton *closeBtn;
 
-
-
 @end
 
 @implementation RJChartLandscapeViewController2
@@ -97,7 +95,7 @@
 }
 
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations {
-    if (self.present) {
+    if (self.isLandscape) {
         return UIInterfaceOrientationMaskPortrait | UIInterfaceOrientationMaskLandscapeRight;
     }
     return UIInterfaceOrientationMaskLandscapeRight;

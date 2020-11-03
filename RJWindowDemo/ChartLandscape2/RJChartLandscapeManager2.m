@@ -34,10 +34,7 @@
 #pragma mark - Setup Init
 
 - (void)setupInit {
-}
-
-- (void)dealloc {
-
+    
 }
 
 #pragma mark - Public Methods
@@ -47,8 +44,11 @@
     [self rotateToOrientation:orientation];
 }
 
+
+#pragma mark - Private Methods
+
 - (void)rotateToOrientation:(UIInterfaceOrientation)orientation {
-    self.window.landscapeViewController.present = !UIInterfaceOrientationIsLandscape(orientation);
+    self.window.landscapeViewController.isLandscape = !UIInterfaceOrientationIsLandscape(orientation);
     if (UIInterfaceOrientationIsLandscape(orientation)) {
         self.fullScreen = YES;
         if (self.orientationWillChange) {
@@ -59,12 +59,16 @@
     }
     
     [self _rotationToLandscapeOrientation:orientation];
+    
     // 强制更改设备方向
     [self interfaceOrientation:UIInterfaceOrientationUnknown];
     [self interfaceOrientation:orientation];
     
 }
 
+
+/// 强制更改设备方向
+/// @param orientation 新的设备方向
 - (void)interfaceOrientation:(UIInterfaceOrientation)orientation {
     if ([[UIDevice currentDevice] respondsToSelector:@selector(setOrientation:)]) {
         SEL selector = NSSelectorFromString(@"setOrientation:");
@@ -74,6 +78,31 @@
         UIInterfaceOrientation val = orientation;
         [invocation setArgument:&val atIndex:2];
         [invocation invoke];
+    }
+}
+
+/// 旋转到横屏
+/// @param orientation 新的界面方向
+- (void)_rotationToLandscapeOrientation:(UIInterfaceOrientation)orientation {
+    if (UIInterfaceOrientationIsLandscape(orientation)) {
+        UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
+        if (keyWindow != self.window && self.previousKeyWindow != keyWindow) {
+            self.previousKeyWindow = keyWindow;
+        }
+        if (!self.window.isKeyWindow) {
+            [self.window makeKeyAndVisible];
+        }
+    }
+}
+
+/// 旋转到竖屏方向
+/// @param orientation 新的界面方向
+- (void)_rotationToPortraitOrientation:(UIInterfaceOrientation)orientation {
+    if (orientation == UIInterfaceOrientationPortrait && !self.window.hidden) {
+        UIWindow *previousKeyWindow = self.previousKeyWindow ?: [UIApplication sharedApplication].windows.firstObject;
+        [previousKeyWindow makeKeyAndVisible];
+        self.previousKeyWindow = nil;
+        self.window.hidden = YES;
     }
 }
 
@@ -97,31 +126,6 @@
 - (void)ls_didRotateToOrientation:(UIInterfaceOrientation)orientation {
     if (!self.fullScreen) {
         [self _rotationToPortraitOrientation:UIInterfaceOrientationPortrait];
-    }
-}
-
-
-
-#pragma mark - Private Methods
-
-- (void)_rotationToLandscapeOrientation:(UIInterfaceOrientation)orientation {
-    if (UIInterfaceOrientationIsLandscape(orientation)) {
-        UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
-        if (keyWindow != self.window && self.previousKeyWindow != keyWindow) {
-            self.previousKeyWindow = keyWindow;
-        }
-        if (!self.window.isKeyWindow) {
-            [self.window makeKeyAndVisible];
-        }
-    }
-}
-
-- (void)_rotationToPortraitOrientation:(UIInterfaceOrientation)orientation {
-    if (orientation == UIInterfaceOrientationPortrait && !self.window.hidden) {
-        UIWindow *previousKeyWindow = self.previousKeyWindow ?: [UIApplication sharedApplication].windows.firstObject;
-        [previousKeyWindow makeKeyAndVisible];
-        self.previousKeyWindow = nil;
-        self.window.hidden = YES;
     }
 }
 

@@ -13,7 +13,6 @@
 - (BOOL)ls_shouldAutorotate;
 - (void)ls_willRotateToOrientation:(UIInterfaceOrientation)orientation;
 - (void)ls_didRotateToOrientation:(UIInterfaceOrientation)orientation;
-- (CGRect)ls_targetRect;
 
 @end
 
@@ -23,8 +22,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 代理
 @property (nonatomic, weak) id <RJChartLandscapeViewControllerDelegate2> delegate;
-/// Desription
-@property (nonatomic, assign) BOOL present;
+/// 是否横屏，用于决定支持的界面方向
+@property (nonatomic, assign) BOOL isLandscape;
 
 @end
 
