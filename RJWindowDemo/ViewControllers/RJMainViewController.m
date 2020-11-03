@@ -34,7 +34,7 @@
     UIView *containerView = [[UIView alloc] init];
     [self.view addSubview:containerView];
     [containerView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.center.mas_equalTo(self.view).mas_offset(CGPointMake(0, -150.0));
+        make.center.mas_equalTo(self.view).mas_offset(CGPointMake(0, -200.0));
         make.width.mas_equalTo(self.view);
         make.height.mas_equalTo(200.0);
     }];

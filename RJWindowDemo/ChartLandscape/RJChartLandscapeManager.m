@@ -78,16 +78,16 @@
 - (void)rotateToOrientation:(UIInterfaceOrientation)orientation animated:(BOOL)animated completed:(void (^)(void))completed {
     if (UIInterfaceOrientationIsLandscape(orientation)) {
         if (!self.fullScreen) {
-            CGRect targetRect = [self.containerView convertRect:self.contentView.frame toView:self.containerView.window];
+            CGRect targetRect = [self.contentView convertRect:self.contentView.frame toView:self.containerView.window];
             if (!self.window) {
                 self.window = [[RJChartLandscapeWindow alloc] init];
+                self.window.landscapeViewController.delegate = self;
                 [self.window.rootViewController loadViewIfNeeded];
             }
-            self.window.landscapeViewController.delegate = self;
             self.window.landscapeViewController.targetRect = targetRect;
             self.window.landscapeViewController.originRect = self.contentView.frame;
-            self.window.landscapeViewController.containerView = self.containerView;
             self.window.landscapeViewController.contentView = self.contentView;
+            self.window.landscapeViewController.containerView = self.containerView;
             self.fullScreen = YES;
         }
         if (self.orientationWillChange) {
@@ -137,14 +137,14 @@
         UIView *snapshot = [self.contentView snapshotViewAfterScreenUpdates:NO];
         snapshot.frame = self.containerView.bounds;
         [self.containerView addSubview:snapshot];
-        [self performSelector:@selector(_contentViewAdd:) onThread:NSThread.mainThread withObject:self.containerView waitUntilDone:NO modes:@[NSDefaultRunLoopMode]];
+        [self performSelector:@selector(_contentViewAdd:) onThread:[NSThread mainThread] withObject:self.containerView waitUntilDone:NO modes:@[NSDefaultRunLoopMode]];
         [self performSelector:@selector(_makeKeyAndVisible:) onThread:[NSThread mainThread] withObject:snapshot waitUntilDone:NO modes:@[NSDefaultRunLoopMode]];
     }
 }
 
 - (void)_contentViewAdd:(UIView *)containerView {
     [containerView addSubview:self.contentView];
-    self.contentView.frame = self.containerView.bounds;
+    self.contentView.frame = containerView.bounds;
     [self.contentView layoutIfNeeded];
 }
 
@@ -154,6 +154,8 @@
     [previousKeyWindow makeKeyAndVisible];
     self.previousKeyWindow = nil;
     self.window.hidden = YES;
+#warning 先暂时这样处理窗口过渡动画不稳定的情况
+//    self.window = nil;
 }
 
 #pragma mark - Property Methods
