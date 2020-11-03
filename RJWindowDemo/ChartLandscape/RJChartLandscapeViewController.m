@@ -15,7 +15,8 @@
 @property (nonatomic, assign) UIInterfaceOrientation currentOrientation;
 /// <#Desription#>
 @property (nonatomic, weak) UIView *chartContainerView;
-
+/// <#Desription#>
+@property (nonatomic, weak) UIButton *closeBtn;
 
 @end
 
@@ -51,6 +52,7 @@
         }
         make.size.mas_equalTo(CGSizeMake(80.0, 40.0));
     }];
+    self.closeBtn = closeBtn;
     closeBtn.backgroundColor = [UIColor orangeColor];
     [closeBtn setTitle:@"关闭" forState:UIControlStateNormal];
     [closeBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
@@ -78,7 +80,7 @@
 - (void)viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
     self.chartContainerView.center = self.view.center;
-    self.chartContainerView.bounds = CGRectMake(0, 0, CGRectGetWidth(self.view.frame), 200);
+    self.chartContainerView.bounds = CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame) - 100.0);
 }
 
 #pragma mark - Target Methods
@@ -112,6 +114,7 @@
     
     [self.delegate ls_willRotateToOrientation:self.currentOrientation];
     BOOL isFullscreen = size.width > size.height;
+    self.closeBtn.hidden = !isFullscreen;
     [CATransaction begin];
     [CATransaction setDisableActions:NO];
     [coordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext> _Nonnull context) {

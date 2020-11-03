@@ -34,7 +34,7 @@
     UIView *containerView = [[UIView alloc] init];
     [self.view addSubview:containerView];
     [containerView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.center.mas_equalTo(self.view).mas_offset(CGPointMake(0, -200.0));
+        make.center.mas_equalTo(self.view).mas_offset(CGPointMake(0, -150.0));
         make.width.mas_equalTo(self.view);
         make.height.mas_equalTo(200.0);
     }];
@@ -44,6 +44,7 @@
     // 1.contentView不能使用自动布局；
     // 2.contentView不能在viewWillLayoutSubviews方法里设置frame。 因为更换窗口后会再次调用此方法，造成contentView的frame一直固定
     // 3.contentView的大小跟containerView一致。
+    // 4.全屏后的view的size要比竖屏的大，动画才会一致
     UIView *contentView = [[UIView alloc] init];
     [containerView addSubview:contentView];
     contentView.frame = containerView.bounds;
@@ -199,5 +200,18 @@
     [manager enterFullScreen:YES animated:YES completed:nil];
 }
 
+#pragma mark - StatusBar
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleDefault;
+}
+
+- (BOOL)prefersStatusBarHidden {
+    return NO;
+}
+
+- (UIStatusBarAnimation)preferredStatusBarUpdateAnimation {
+    return UIStatusBarAnimationNone;
+}
 
 @end
