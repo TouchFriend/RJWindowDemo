@@ -48,6 +48,7 @@
 }
 
 - (void)rotateToOrientation:(UIInterfaceOrientation)orientation {
+    self.window.landscapeViewController.present = !UIInterfaceOrientationIsLandscape(orientation);
     if (UIInterfaceOrientationIsLandscape(orientation)) {
         self.fullScreen = YES;
         if (self.orientationWillChange) {

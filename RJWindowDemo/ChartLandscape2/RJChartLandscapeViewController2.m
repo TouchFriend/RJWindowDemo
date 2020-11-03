@@ -16,6 +16,8 @@
 /// <#Desription#>
 @property (nonatomic, weak) UIButton *closeBtn;
 
+
+
 @end
 
 @implementation RJChartLandscapeViewController2
@@ -86,14 +88,6 @@
     if (!isFullscreen) {
         [self.delegate ls_didRotateToOrientation:newOrientation];
     }
-    
-    [CATransaction begin];
-    [CATransaction setDisableActions:NO];
-    [coordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext> _Nonnull context) {
-
-    } completion:^(id<UIViewControllerTransitionCoordinatorContext> _Nonnull context) {
-        [CATransaction commit];
-    }];
 }
 
 #pragma mark - Autorotation
@@ -103,11 +97,10 @@
 }
 
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations {
-    UIInterfaceOrientation currentOrientation = (UIInterfaceOrientation)[UIDevice currentDevice].orientation;
-    if (UIInterfaceOrientationIsLandscape(currentOrientation)) {
-        return UIInterfaceOrientationMaskLandscape;
+    if (self.present) {
+        return UIInterfaceOrientationMaskPortrait | UIInterfaceOrientationMaskLandscapeRight;
     }
-    return UIInterfaceOrientationMaskAll;
+    return UIInterfaceOrientationMaskLandscapeRight;
 }
 
 - (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation {
