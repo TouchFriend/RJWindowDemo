@@ -154,8 +154,6 @@
     [previousKeyWindow makeKeyAndVisible];
     self.previousKeyWindow = nil;
     self.window.hidden = YES;
-#warning 先暂时这样处理窗口过渡动画不稳定的情况
-//    self.window = nil;
 }
 
 #pragma mark - Property Methods

@@ -7,7 +7,7 @@
 //
 
 #import "RJMainViewController2.h"
-#import "RJChartLandscapeManager.h"
+#import "RJChartLandscapeManager2.h"
 #import "RJChartRotationHelper.h"
 #import <Masonry/Masonry.h>
 #import "RJLineChartView.h"
@@ -43,12 +43,6 @@
     
     [self setupLineChartView];
     
-    RJChartLandscapeManager *manager = [RJChartLandscapeManager shareInstance];
-    manager.contentView = self.contentView;
-    manager.orientationWillChange = ^(BOOL isFullScreen) {
-        RJAllowOrentitaionRotation = isFullScreen;
-    };
-    
     UIButton *openBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.view addSubview:openBtn];
     [openBtn mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -60,20 +54,26 @@
     [openBtn setTitle:@"旋转" forState:UIControlStateNormal];
     [openBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [openBtn addTarget:self action:@selector(openBtnClick) forControlEvents:UIControlEventTouchUpInside];
+    
+    RJChartLandscapeManager2 *manager = [RJChartLandscapeManager2 shareInstance];
+    manager.orientationWillChange = ^(BOOL isFullScreen) {
+        RJAllowOrentitaionRotation = isFullScreen;
+    };
 }
 
 - (void)setupLineChartView {
     RJLineChartView *chartView = [[RJLineChartView alloc] init];
     [self.containerView addSubview:chartView];
-    chartView.frame = self.containerView.bounds;
-    chartView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    [chartView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.mas_equalTo(self.containerView);
+    }];
     self.chartView = chartView;
     self.contentView = chartView;
 }
 
 - (void)openBtnClick {
-    RJChartLandscapeManager *manager = [RJChartLandscapeManager shareInstance];
-    [manager enterFullScreen:YES animated:YES completed:nil];
+    RJChartLandscapeManager2 *manager = [RJChartLandscapeManager2 shareInstance];
+    [manager enterFullScreen:YES];
 }
 
 #pragma mark - StatusBar
