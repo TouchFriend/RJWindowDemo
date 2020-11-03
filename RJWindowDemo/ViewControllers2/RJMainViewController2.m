@@ -1,17 +1,18 @@
 //
-//  RJMainViewController.m
+//  RJMainViewController2.m
 //  RJWindowDemo
 //
-//  Created by TouchWorld on 2020/10/28.
+//  Created by TouchWorld on 2020/11/3.
+//  Copyright © 2020 RJSoft. All rights reserved.
 //
 
-#import "RJMainViewController.h"
+#import "RJMainViewController2.h"
 #import "RJChartLandscapeManager.h"
 #import "RJChartRotationHelper.h"
 #import <Masonry/Masonry.h>
 #import "RJLineChartView.h"
 
-@interface RJMainViewController ()
+@interface RJMainViewController2 ()
 
 /// <#Desription#>
 @property (nonatomic, weak) UIView *containerView;
@@ -24,7 +25,7 @@
 
 @end
 
-@implementation RJMainViewController
+@implementation RJMainViewController2
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -39,27 +40,6 @@
     }];
     self.containerView = containerView;
     containerView.backgroundColor = [UIColor whiteColor];
-    
-    // 1.contentView不能使用自动布局；
-    // 2.contentView不能在viewWillLayoutSubviews方法里设置frame。 因为更换窗口后会再次调用此方法，造成contentView的frame一直固定
-    // 3.contentView的大小跟containerView一致。
-    // 4.全屏后的view的size要比竖屏的大，动画才会一致
-//    UIView *contentView = [[UIView alloc] init];
-//    [containerView addSubview:contentView];
-//    contentView.frame = containerView.bounds;
-//    contentView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-//    self.contentView = contentView;
-//    contentView.backgroundColor = [UIColor orangeColor];
-//
-//    UITextField *textF = [[UITextField alloc] init];
-//    [contentView addSubview:textF];
-//    [textF mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.center.mas_equalTo(contentView);
-//        make.size.mas_equalTo(CGSizeMake(100.0, 30.0));
-//    }];
-//    self.textF = textF;
-//    textF.backgroundColor = [UIColor whiteColor];
-//    textF.text = @"测试一下";
     
     [self setupLineChartView];
     

@@ -26,6 +26,8 @@
 		BF4C3094254ABF3000BB45C1 /* RJChartLandscapeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4C3093254ABF3000BB45C1 /* RJChartLandscapeViewController.m */; };
 		BF4C309B254ABFC500BB45C1 /* RJChartLandscapeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4C309A254ABFC500BB45C1 /* RJChartLandscapeManager.m */; };
 		BF5DD24325512B66001230E8 /* RJLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5DD24225512B66001230E8 /* RJLineChartView.m */; };
+		BF5DD24A25513003001230E8 /* RJMainTabBarViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5DD24925513003001230E8 /* RJMainTabBarViewController2.m */; };
+		BF5DD254255133D5001230E8 /* RJMainViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5DD253255133D5001230E8 /* RJMainViewController2.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +86,10 @@
 		BF4C309A254ABFC500BB45C1 /* RJChartLandscapeManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJChartLandscapeManager.m; sourceTree = "<group>"; };
 		BF5DD24125512B66001230E8 /* RJLineChartView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJLineChartView.h; sourceTree = "<group>"; };
 		BF5DD24225512B66001230E8 /* RJLineChartView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJLineChartView.m; sourceTree = "<group>"; };
+		BF5DD24825513003001230E8 /* RJMainTabBarViewController2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJMainTabBarViewController2.h; sourceTree = "<group>"; };
+		BF5DD24925513003001230E8 /* RJMainTabBarViewController2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJMainTabBarViewController2.m; sourceTree = "<group>"; };
+		BF5DD252255133D5001230E8 /* RJMainViewController2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJMainViewController2.h; sourceTree = "<group>"; };
+		BF5DD253255133D5001230E8 /* RJMainViewController2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJMainViewController2.m; sourceTree = "<group>"; };
 		C4E26E8BFACFD5329BEA57DD /* Pods-RJWindowDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RJWindowDemoTests.release.xcconfig"; path = "Target Support Files/Pods-RJWindowDemoTests/Pods-RJWindowDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		CF06B60D95D0BB0B2E5234A1 /* Pods-RJWindowDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RJWindowDemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-RJWindowDemoUITests/Pods-RJWindowDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EF66041C616D811D0AB338A9 /* Pods-RJWindowDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RJWindowDemoUITests.release.xcconfig"; path = "Target Support Files/Pods-RJWindowDemoUITests/Pods-RJWindowDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -152,6 +158,8 @@
 		BF1FA6E02549103100B46A58 /* RJWindowDemo */ = {
 			isa = PBXGroup;
 			children = (
+				BF5DD251255133AE001230E8 /* ViewControllers2 */,
+				BF5DD24725512FCE001230E8 /* ChartLandscape2 */,
 				BF4C3098254ABF7700BB45C1 /* ChartLandscape */,
 				BF2635A2254BFE0E00279CE7 /* ViewControllers */,
 				BF1FA6E12549103100B46A58 /* AppDelegate.h */,
@@ -213,6 +221,24 @@
 				BF263591254BE6B100279CE7 /* RJChartRotationHelper.m */,
 			);
 			path = ChartLandscape;
+			sourceTree = "<group>";
+		};
+		BF5DD24725512FCE001230E8 /* ChartLandscape2 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ChartLandscape2;
+			sourceTree = "<group>";
+		};
+		BF5DD251255133AE001230E8 /* ViewControllers2 */ = {
+			isa = PBXGroup;
+			children = (
+				BF5DD24825513003001230E8 /* RJMainTabBarViewController2.h */,
+				BF5DD24925513003001230E8 /* RJMainTabBarViewController2.m */,
+				BF5DD252255133D5001230E8 /* RJMainViewController2.h */,
+				BF5DD253255133D5001230E8 /* RJMainViewController2.m */,
+			);
+			path = ViewControllers2;
 			sourceTree = "<group>";
 		};
 		C8ED37BA3217B9FD25C59743 /* Pods */ = {
@@ -457,8 +483,10 @@
 				BF4C3094254ABF3000BB45C1 /* RJChartLandscapeViewController.m in Sources */,
 				BF1FA6E32549103100B46A58 /* AppDelegate.m in Sources */,
 				BF1FA71B2549438100B46A58 /* RJMainViewController.m in Sources */,
+				BF5DD254255133D5001230E8 /* RJMainViewController2.m in Sources */,
 				BF4C309B254ABFC500BB45C1 /* RJChartLandscapeManager.m in Sources */,
 				BF1FA6F42549103200B46A58 /* main.m in Sources */,
+				BF5DD24A25513003001230E8 /* RJMainTabBarViewController2.m in Sources */,
 				BF5DD24325512B66001230E8 /* RJLineChartView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

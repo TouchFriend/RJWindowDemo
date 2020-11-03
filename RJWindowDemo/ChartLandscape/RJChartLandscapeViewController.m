@@ -80,7 +80,13 @@
 - (void)viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
     self.chartContainerView.center = self.view.center;
-    self.chartContainerView.bounds = CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame) - 100.0);
+    
+    if (@available(iOS 11.0, *)) {
+        self.chartContainerView.bounds = CGRectMake(0, 0, CGRectGetWidth(self.view.frame) - self.view.safeAreaInsets.left - self.view.safeAreaInsets.right, CGRectGetHeight(self.view.frame) - 100.0 - self.view.safeAreaInsets.top - self.view.safeAreaInsets.bottom);
+    } else {
+        // Fallback on earlier versions
+        self.chartContainerView.bounds = CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame) - 100.0);
+    }
 }
 
 #pragma mark - Target Methods

@@ -9,6 +9,7 @@
 #import "RJMainViewController.h"
 #import "RJChartRotationHelper.h"
 #import "RJMainTabBarViewController.h"
+#import "RJMainTabBarViewController2.h"
 
 @interface AppDelegate ()
 
@@ -20,7 +21,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    RJMainTabBarViewController *vc = [[RJMainTabBarViewController alloc] init];
+    RJMainTabBarViewController2 *vc = [[RJMainTabBarViewController2 alloc] init];
     self.window.rootViewController = vc;
     [self.window makeKeyAndVisible];
     
