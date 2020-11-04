@@ -226,8 +226,6 @@
 				BF4C308D254AB33300BB45C1 /* RJChartLandscapeWindow.m */,
 				BF4C3092254ABF3000BB45C1 /* RJChartLandscapeViewController.h */,
 				BF4C3093254ABF3000BB45C1 /* RJChartLandscapeViewController.m */,
-				BF263590254BE6B100279CE7 /* RJChartRotationHelper.h */,
-				BF263591254BE6B100279CE7 /* RJChartRotationHelper.m */,
 			);
 			path = ChartLandscape;
 			sourceTree = "<group>";
@@ -241,6 +239,8 @@
 				BF5DD25C25513511001230E8 /* RJChartLandscapeWindow2.m */,
 				BF5DD26125513576001230E8 /* RJChartLandscapeViewController2.h */,
 				BF5DD26225513576001230E8 /* RJChartLandscapeViewController2.m */,
+				BF263590254BE6B100279CE7 /* RJChartRotationHelper.h */,
+				BF263591254BE6B100279CE7 /* RJChartRotationHelper.m */,
 			);
 			path = ChartLandscape2;
 			sourceTree = "<group>";
